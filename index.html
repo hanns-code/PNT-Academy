@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PNT Academy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="https://via.placeholder.com/48" alt="PNT Logo" class="brand-logo" />
+        <div>
+          <h1>PNT Academy</h1>
+          <p>Interactive robotics learning for kids with AI, video lessons, and games.</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#modules">Modules</a>
+        <a href="#academy-chat">AI Lab</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-primary">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">PNT Robotics Learning</span>
+          <h2>Learn robotics through guided AI lessons and learning games.</h2>
+          <p>Build foundational PNT skills with personalized study paths, interactive simulations, and real-time feedback.</p>
+          <div class="hero-actions">
+            <button id="startButton" class="button button-primary">Explore the Academy</button>
+            <a href="#modules" class="button button-secondary">See Modules</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <div class="media-card">
+            <div class="media-badge">Video</div>
+            <div class="media-title">Robotics Demo</div>
+            <div class="video-container" style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+              <video style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000;" controls>
+                <source src="videos/PNT Academy Business Proposal for STEM - TRAINING GURU (1080p).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section-light">
+      <div class="container section-heading">
+        <h2>Built for young learners and future technologists</h2>
+        <p>Designed to make robotics study engaging, intuitive, and fun for kids and beginners.</p>
+      </div>
+      <div class="container feature-grid">
+        <article class="feature-card">
+          <h3>AI Learning Coach</h3>
+          <p>Ask questions in plain language and receive intelligent study guidance for PNT robotics concepts.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Video Lessons</h3>
+          <p>Watch short, play-ready lessons that break down navigation, positioning, and robotics fundamentals.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Games & Simulations</h3>
+          <p>Practice navigation skills with interactive challenges and concept-based mini-games.</p>
+        </article>
+        <article class="feature-card">
+          <h3>Progress Tracking</h3>
+          <p>Track completed modules, skills unlocked, and learning milestones in one dashboard.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="modules" class="section-primary">
+      <div class="container section-heading">
+        <h2>Core Learning Modules</h2>
+        <p>Jump into lessons, labs, and games focused on PNT robotics fundamentals.</p>
+      </div>
+      <div class="container card-grid">
+        <article class="module-card">
+          <span class="module-tag">Core Module</span>
+          <h3>Software Engineering</h3>
+          <p>Learn Python, C++, and algorithms optimized for robotics and hardware interfaces.</p>
+          <button class="button button-secondary" onclick="openModule('softwareEng')">Watch course</button>
+        </article>
+        <article class="module-card">
+          <span class="module-tag">Core Module</span>
+          <h3>Hardware Integration</h3>
+          <p>Work with microcontrollers, sensors, and actuators to build responsive systems.</p>
+          <button class="button button-secondary" onclick="openModule('hardwareInt')">Watch course</button>
+        </article>
+        <article class="module-card">
+          <span class="module-tag">Core Module</span>
+          <h3>Autonomous Navigation</h3>
+          <p>Implement SLAM, path planning, and computer vision for self-driving mechanisms.</p>
+          <button class="button button-secondary" onclick="openModule('autonomousNav')">Watch course</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-light" id="academy-chat">
+      <div class="container section-heading">
+        <h2>AI Tutor Studio</h2>
+        <p>Interact with the built-in AI tutor to ask questions, get lesson help, and discover smart robotics tips.</p>
+      </div>
+      <div class="container chat-grid">
+        <div class="chat-panel">
+          <div class="chat-messages" id="chatMessages"></div>
+          <form id="chatForm" class="chat-form">
+            <input type="text" id="chatInput" placeholder="Ask the AI tutor about PNT robotics..." autocomplete="off" />
+            <button type="submit" class="button button-primary">Send</button>
+          </form>
+        </div>
+        <div class="chat-summary">
+          <h3>Try these prompts</h3>
+          <ul>
+            <li>How does PNT help a robot move?</li>
+            <li>Explain GPS vs inertial navigation.</li>
+            <li>Show me a simple robotics game idea.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-primary" id="learning-hub">
+      <div class="container section-heading">
+        <h2>Interactive Practice</h2>
+        <div class="practice-grid">
+          <article class="practice-card">
+            <h3>Skill Meter</h3>
+            <p>Complete lessons and games to grow your robotics skill score.</p>
+            <div class="meter"><span style="width: 48%"></span></div>
+          </article>
+          <article class="practice-card">
+            <h3>Quick Quiz</h3>
+            <p>Answer short questions to test your PNT knowledge and see your score rise.</p>
+            <button class="button button-secondary" onclick="showQuiz()">Start quiz</button>
+          </article>
+          <article class="practice-card practice-knowledge-card">
+            <h3>General Knowledge</h3>
+            <p>Explore robotics fundamentals with these key ideas:</p>
+            <ul>
+              <li>How GPS and sensors help robots know where they are.</li>
+              <li>Why inertial navigation is important for movement tracking.</li>
+              <li>How timing keeps robots acting safely and accurately.</li>
+              <li>How maps, waypoints, and route planning guide robot paths.</li>
+              <li>How obstacle detection and avoidance make navigation smarter.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>PNT Academy</h3>
+        <p>Launch your robotics curriculum with interactive AI and games.</p>
+      </div>
+      <p>Designed for kids, powered by robotics learning.</p>
+    </div>
+  </footer>
+
+  <div id="moduleOverlay" class="overlay hidden">
+    <div class="overlay-panel">
+      <button class="overlay-close" onclick="closeOverlay()">×</button>
+      <div id="moduleContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
